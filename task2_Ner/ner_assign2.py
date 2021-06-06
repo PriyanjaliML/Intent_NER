@@ -115,7 +115,11 @@ with nlp.disable_pipes(*disable_pipes):
 for text, _ in train: 
     doc = nlp(text)
     print('Entities', [(ent.text, ent.label_) for ent in doc.ents])    
-    
-    
+#testing on new sentence
+text = "I have to deliever the amount of nearest to EUR 10,000"
+doc = nlp(text)
+
+for ent in doc.ents:
+    print('Entities', [(ent.text, ent.label_) for ent in doc.ents])
     
     
